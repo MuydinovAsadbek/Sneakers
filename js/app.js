@@ -1,3 +1,4 @@
+
 // VIEW PURCHASED PRODUCTS
 const elBasketBtn = document.querySelector('.site-header__icon');
 const elShoppingCard = document.querySelector('.shopping-card');
@@ -8,6 +9,27 @@ if (elBasketBtn) {
         elShoppingCard.classList.toggle('shopping-card-d-block')
     });
 };
+
+
+// IMG-SHOWCASE
+const elShowcaseImgActive = document.querySelector('.img-showcase__active-img')
+const elsImgShowcaseButton = document.querySelectorAll('.js-img-showcase__thumbnail-button');
+const elsImgThumbniels = document.querySelectorAll('.img-showcase__thumbnail');
+elsImgShowcaseButton.forEach(function (elButton) {
+    elButton.addEventListener('click', function () {
+        //Remove active state from all buttons
+elsImgThumbniels.forEach(function (elImgThumbniels) {
+    elImgThumbniels.classList.remove('img-showcase__thumbnail--active')
+});
+
+// Add active state to clicked button
+elButton.parentElement.classList.add('img-showcase__thumbnail--active')
+
+// Update active image src accordingly
+    elShowcaseImgActive.src = elButton.dataset.imgShowcaseBig;
+    elShowcaseImgActive.srcset = `${elButton.dataset.imgShowcaseBig} 1x ${elButton.dataset.imgShowcaseRetina} 2x`
+});
+
 
 
 // CANCEL PURCHASE

@@ -62,7 +62,7 @@
         <!-- SHOPPING-CARD-LIST -->
         <ul class="shopping-card__product">
           <li class="shopping-card__item">
-            <img class="shopping-card__img" src="img/hero_img.svg" alt="shopping img" width="50" height="50">
+            <img class="shopping-card__img" src="img/active-img.jpg" alt="shopping img" width="50" height="50" srcset="img/active-img.jpg 1x, img/active-img@2x.jpg 2x">
             <div class="shopping-card__content">
               <h3 class="shopping-card__info">Fall Limited Edition Sneakers</h3>
               <div class="shopping-card__cost">$125.00 x 3 <b>$375.00</b> </div>
@@ -89,38 +89,63 @@
 
   <!--MAIN-CONTENT  -->
   <main class="main-content">
-
-    <!-- SITE-HERO -->
-    <section class="main-content__site-hero site-hero">
-      <div class="site-hero__container container">
-        <div class="site-hero__img-block">
-          <img class="site-hero__img" src="img/hero_img.svg" alt="shoe wallpaper" width="445" height="445">
-          <ul class="site-hero__list">
-            <li class="site-hero__item">
-              <a class="site-hero__img-link" href="#"><img class="site-hero__shoes-img" src="img/shoes-1.svg"
-                  alt="shoes img" width="88" height="88"></a>
-            </li>
-            <li class="site-hero__item">
-              <a class="site-hero__img-link" href="#"><img class="site-hero__shoes-img" src="img/shoes-2.svg"
-                  alt="shoes img" width="88" height="88"></a>
-            </li>
-            <li class="site-hero__item">
-              <a class="site-hero__img-link" href="#"><img class="site-hero__shoes-img" src="img/shoes-3.svg"
-                  alt="shoes img" width="88" height="88"></a>
-            </li>
-            <li class="site-hero__item">
-              <a class="site-hero__img-link" href="#"><img class="site-hero__shoes-img" src="img/shoes-4.svg"
-                  alt="shoes img" width="88" height="88"></a>
-            </li>
-          </ul>
+    <!--PRODUCT-PAGE -->
+    <div class="product-page">
+      <div class="product-page__container container">
+        <!-- PRODUCT-PAGE-GALLERY -->
+        <div class="product-paga__gallery">
+          <!-- IMG-SHOWCASE -->
+          <div class="img-showcase">
+            <div class="img-showcase__showcase">
+              <img class="img-showcase__active-img" src="img/active-img.jpg" alt="Fall Limited Edition Sneakers"
+                width="445" height="445" srcset="img/active-img.jpg 1x img/active-img@2x.jpg 2x">
+            </div>
+            <!-- IMG-SHOWCASE-THUMBNAILS -->
+            <ul class="img-showcase__thumbnails">
+              <li class="img-showcase__thumbnail img-showcase__thumbnail--active">
+                <button class="img-showcase__thumbnail-button js-img-showcase__thumbnail-button" type="button"
+                  aria-label="img 1" data-img-showcase-big="img/active-small-img.jpg"
+                  data-img-showcase-retina="img/active-small-img@2x.jpg">
+                  <img class="img-showcase__thumbnail-img" src="img/active-small-img.jpg" alt="img 1" width="88"
+                    height="88" srcset="img/active-small-img.jpg 1x img/active-small-img@2x.jpg 2x">
+                </button>
+              </li>
+              <li class="img-showcase__thumbnail">
+                <button class="img-showcase__thumbnail-button js-img-showcase__thumbnail-button" type="button"
+                  aria-label="img 2" data-img-showcase-big="img/shopping-img-2.jpg"
+                  data-img-showcase-retina="img/shopping-img-2@2x.jpg">
+                  <img class="img-showcase__thumbnail-img" src="img/shopping-img-2.jpg" alt="img 2" width="88"
+                    height="88" srcset="img/shopping-img-2.jpg 1x img/shopping-img-2@2x.jpg 2x">
+                </button>
+              </li>
+              <li class="img-showcase__thumbnail">
+                <button class="img-showcase__thumbnail-button js-img-showcase__thumbnail-button" type="button"
+                  aria-label="img 3" data-img-showcase-big="img/shopping-img-3.jpg"
+                  data-img-showcase-retina="img/shopping-img-3@2x.jpg">
+                  <img class="img-showcase__thumbnail-img" src="img/shopping-img-3.jpg" alt="img 3" width="88"
+                    height="88" srcset="img/shopping-img-3.jpg 1x img/shopping-img-3@2x.jpg 2x">
+                </button>
+              </li>
+              <li class="img-showcase__thumbnail">
+                <button class="img-showcase__thumbnail-button js-img-showcase__thumbnail-button" type="button"
+                  aria-label="img 4" data-img-showcase-big="img/shopping-img-4.jpg"
+                  data-img-showcase-retina="img/shopping-img-4@2x.jpg">
+                  <img class="img-showcase__thumbnail-img" src="img/shopping-img-4.jpg" alt="img 4" width="88"
+                    height="88" srcset="img/shopping-img-4.jpg 1x img/shopping-img-4@2x.jpg 2x">
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="site-hero__block">
-          <a class="site-hero__link" href="#">Sneaker Company</a>
-          <h1 class="site-hero__title">Fall Limited Edition Sneakers</h1>
-          <p class="site-hero__text">These low-profile sneakers are your perfect casual wear companion. Featuring a
+
+        <!-- SITE-HERO-INFO -->
+        <div class="product-info">
+          <a class="product-info__link" href="#">Sneaker Company</a>
+          <h1 class="product-info__title">Fall Limited Edition Sneakers</h1>
+          <p class="product-info__text">These low-profile sneakers are your perfect casual wear companion. Featuring a
             durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 
-          <div class="site-hero__price-block price-block">
+          <div class="price-block">
             <span class="price-block__price">$125.00</span>
             <span class="price-block__discount">50%</span>
           </div>
@@ -138,7 +163,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <script src="js/app.js"></script>
