@@ -27,7 +27,6 @@ elButton.parentElement.classList.add('img-showcase__thumbnail--active')
 
     elShowcaseImgActive.src = elButton.dataset.imgShowcaseBig;
     elShowcaseImgActive.srcset = `${elButton.dataset.imgShowcaseBig} 1x ${elButton.dataset.imgShowcaseRetina} 2x`
-
     });
 });
 
@@ -69,3 +68,20 @@ elSplit.addEventListener('click', function(){
         elCardCount.textContent = 0;
     }
 });
+
+
+// LIGHTBOX OPEN
+const elOpenLightboxBtn = document.querySelector('.img-showcase__lightbox-toggle');
+const elOpenLightbox = document.querySelector('.lightbox');
+const elCloseLigtboxBtn = document.querySelector('.lightbox__close-button');
+
+if (elOpenLightboxBtn) {
+    elOpenLightboxBtn.addEventListener('click', function() {
+        elOpenLightbox.classList.add('lightbox--open')
+    });
+    if (elCloseLigtboxBtn) {
+        elCloseLigtboxBtn.addEventListener('click', function() {
+            elOpenLightbox.classList.remove('lightbox--open');
+        })
+    }
+};
