@@ -25,9 +25,10 @@ elsImgThumbniels.forEach(function (elImgThumbniels) {
 // Add active state to clicked button
 elButton.parentElement.classList.add('img-showcase__thumbnail--active')
 
-// Update active image src accordingly
     elShowcaseImgActive.src = elButton.dataset.imgShowcaseBig;
     elShowcaseImgActive.srcset = `${elButton.dataset.imgShowcaseBig} 1x ${elButton.dataset.imgShowcaseRetina} 2x`
+
+    });
 });
 
 
